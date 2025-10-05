@@ -1,0 +1,44 @@
+
+/* App.css - simplified for Tailwind setup */
+
+/* Root container: centers and gives breathing room */
+#root {
+  @apply max-w-5xl mx-auto p-6 text-center;
+}
+
+/* Optional logo styling (you can remove if unused) */
+.logo {
+  @apply h-24 p-6 transition duration-300 ease-in-out;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.67));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.67));
+}
+
+/* Spin animation for demo logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Reusable card container */
+.card {
+  @apply p-6 rounded-2xl shadow-md bg-white text-gray-800;
+}
+
+/* Docs / secondary text */
+.read-the-docs {
+  @apply text-gray-500 text-sm;
+}
