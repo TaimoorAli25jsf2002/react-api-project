@@ -19,11 +19,13 @@ import Advice from './pages/Advice';
 
 import ColorPalette from './pages/ColorPalette';
 
+import Footer from './components/Footer';
+
 export default function App() {
 return (
-<div className="min-h-screen bg-gray-50">
+<div className="min-h-screen bg-gray-50 flex flex-col">
 <Navbar />
-<main className="container mx-auto p-4">
+<main className="container mx-auto p-4 flex-1">
 <Routes>
 <Route path="/" element={<Home />} />
 
@@ -41,6 +43,7 @@ return (
 
 </Routes>
 </main>
+<Footer />
 </div>
 );
 }
